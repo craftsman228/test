@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, Component } from '@angular/core';
-import { AgmCoreModule } from '@agm/core';
 import {AppComponent} from "../app.component";
-
 
 @Component({
   selector: 'app-home-page',
@@ -14,8 +10,8 @@ import {AppComponent} from "../app.component";
 
 export class HomePageComponent implements OnInit {
 
-  lat:  51.678418;
-  lng:  7.809007;
+  lat:  40.678418;
+  lng:  40.809007;
 
   constructor() { }
 
