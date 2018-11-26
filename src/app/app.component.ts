@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {google} from "@agm/core/services/google-maps-types";
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'test-doIt';
 }
+
 

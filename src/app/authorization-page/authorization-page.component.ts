@@ -19,7 +19,7 @@ export class AuthorizationPageComponent implements OnInit {
     var password = e.target.elements[1].value;
 
       if (username == 'admin' && password == 'admin'){
-        this.user.setUserLoggedIn();
+                this.user.setUserLoggedIn();
         this.router.navigate(['']);
       }
   }
