@@ -57,7 +57,7 @@ export class HomePageComponent{
       visible: false
     },
     {
-      lat: 46.441596,
+      lat: 46.442996,
       lng: 30.749804,
       label: 'SushiSet',
       draggable: false,
@@ -72,7 +72,7 @@ export class HomePageComponent{
     },
     {
       lat:  46.441602,
-      lng: 30.749458,
+      lng: 30.746858,
       label: 'Shtrudel',
       draggable: false,
       visible: false,
