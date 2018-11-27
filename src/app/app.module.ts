@@ -10,6 +10,9 @@ import { RouterModule } from "@angular/router";
 import { UserService } from './user.service'
 import { AgmCoreModule} from '@agm/core'
 
+import { FormsModule, ReactiveFormsModule} from "@angular/forms";
+
+
 const routes = [
   {path:'', component: HomePageComponent},
   {path:'authorization', component:AuthorizationPageComponent},
@@ -27,6 +30,8 @@ const routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
+    FormsModule,
+    ReactiveFormsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBp6g_oEhxiz_kCvPcpSDNmg73wO8QHr4Q'
     })

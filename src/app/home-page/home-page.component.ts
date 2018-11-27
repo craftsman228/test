@@ -11,7 +11,7 @@ import {google} from "@agm/core/services/google-maps-types";
 export class HomePageComponent{
 
   // google maps zoom level
-   zoom: any = 15;
+   zoom: number = 15;
 
   // initial center position for the map
   lat: number = 46.44;
@@ -83,19 +83,19 @@ setVisible(){
     var element1 = <HTMLInputElement> document.getElementById('school_b');
     var isChecked1 = element1.checked;
     if (isChecked1){
-      this.markers.marker[0].visible = true;
+      this.markers[0].visible = true;
     }
   var element2 = <HTMLInputElement> document.getElementById('pharm_b');
   var isChecked2 = element2.checked;
   if (isChecked2){
-    this.markers.marker[1].visible = true;
+        this.markers[1].visible = true;
   }
   var element3 = <HTMLInputElement> document.getElementById('cafe_b');
   var isChecked3 = element3.checked;
   if (isChecked3){
-    this.markers.marker[2].visible = true;
-    this.markers.marker[3].visible = true;
-    this.markers.marker[4].visible = true;
+    this.markers[2].visible = true;
+    this.markers[3].visible = true;
+    this.markers[4].visible = true;
   }
  }
 
