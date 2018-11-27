@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MouseEvent } from '@agm/core';
 import {google} from "@agm/core/services/google-maps-types";
+import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-home-page',
@@ -79,20 +80,22 @@ export class HomePageComponent{
     }
   ]
 
-setVisible(){
-    var element1 = <HTMLInputElement> document.getElementById('school_b');
-    var isChecked1 = element1.checked;
-    if (isChecked1){
+  buttonsForm : FormGroup;
+
+   setVisible(){
+     this.buttonsForm = new FormGroup({
+       school : new FormControl(),
+       pharm : new FormControl(),
+       cafe : new FormControl()
+     });
+
+    if (this.buttonsForm.controls.school.touched){
       this.markers[0].visible = true;
     }
-  var element2 = <HTMLInputElement> document.getElementById('pharm_b');
-  var isChecked2 = element2.checked;
-  if (isChecked2){
+  if (this.buttonsForm.controls.pharm.touched){
         this.markers[1].visible = true;
   }
-  var element3 = <HTMLInputElement> document.getElementById('cafe_b');
-  var isChecked3 = element3.checked;
-  if (isChecked3){
+  if (this.buttonsForm.controls.cafe.touched){
     this.markers[2].visible = true;
     this.markers[3].visible = true;
     this.markers[4].visible = true;

@@ -37,17 +37,17 @@
 </div>
 <br>
 <div class="buttons">
-  <form id="buttonform">
+  <form id="buttonsform"  formGroup="buttonsForm">
     <label>
-        <input class="with-gap" name="group3" type="radio" id="school_b" />
+        <input class="with-gap" name="group3" type="radio" id="school_b" class="form-control" formControlName="school"/>
         <span>schools</span>
     </label>
     <label>
-      <input class="with-gap" name="group3" type="radio" id="pharm_b" />
+      <input class="with-gap" name="group3" type="radio" id="pharm_b" class="form-control" formControlName="pharm" />
       <span>pharmacies</span>
     </label>
     <label>
-      <input class="with-gap" name="group3" type="radio" id="cafe_b" />
+      <input class="with-gap" name="group3" type="radio" id="cafe_b" class="form-control" formControlName="cafe" />
       <span>cafes</span>
     </label>
   </form>
