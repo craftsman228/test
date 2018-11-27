@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MouseEvent } from '@agm/core';
 import {google} from "@agm/core/services/google-maps-types";
 import {FormControl, FormGroup} from "@angular/forms";
+import { IMarker } from '../marker';
 
 @Component({
   selector: 'app-home-page',
@@ -11,8 +12,7 @@ import {FormControl, FormGroup} from "@angular/forms";
 
 export class HomePageComponent{
 
-  // google maps zoom level
-   zoom: number = 15;
+  zoom: number = 15;
 
   // initial center position for the map
   lat: number = 46.44;
@@ -31,11 +31,8 @@ export class HomePageComponent{
     });
   }
 
-  markerDragEnd(m: marker, $event: MouseEvent) {
-    console.log('dragEnd', m, $event);
-  }
 
-  markers: marker[] = [
+    markers: IMarker[] = [
     {
       lat: 46.440671,
       lng: 30.749340,
@@ -104,14 +101,6 @@ export class HomePageComponent{
 
 }
 
-// just an interface for type safety.
-interface marker {
-  lat: number;
-  lng: number;
-  label?: string;
-  draggable: boolean;
-  visible: boolean;
-}
 
 
 

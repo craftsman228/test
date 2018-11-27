@@ -12,7 +12,6 @@ import { AgmCoreModule} from '@agm/core'
 
 import { FormsModule, ReactiveFormsModule} from "@angular/forms";
 
-
 const routes = [
   {path:'', component: HomePageComponent},
   {path:'authorization', component:AuthorizationPageComponent},

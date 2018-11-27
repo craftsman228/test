@@ -26,7 +26,7 @@ export class AuthorizationPageComponent implements OnInit {
     password = this.authForm.controls.password.value;
 
       if (username == 'admin' && password == 'admin'){
-                this.user.setUserLoggedIn();
+                this.user.setUserLoggedIn(true);
         this.router.navigate(['']);
       }
   }
