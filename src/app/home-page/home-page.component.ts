@@ -13,26 +13,10 @@ import { IMarker } from '../marker';
 export class HomePageComponent{
 
   zoom: number = 15;
-
-  // initial center position for the map
   lat: number = 46.44;
   lng: number = 30.75;
 
-  clickedMarker(label: string, index: number) {
-    console.log(`clicked the marker: ${label || index}`)
-  }
-
-  mapClicked($event: MouseEvent) {
-    this.markers.push({
-     lat: $event.coords.lat,
-     lng: $event.coords.lng,
-     draggable: false,
-     visible: false
-    });
-  }
-
-
-    markers: IMarker[] = [
+  markers: IMarker[] = [
     {
       lat: 46.440671,
       lng: 30.749340,
@@ -62,7 +46,7 @@ export class HomePageComponent{
       visible: false
     },
     {
-     lat: 46.441301,
+      lat: 46.441301,
       lng: 30.749019,
       label: 'Lviv Croissants',
       draggable: false,
@@ -76,6 +60,16 @@ export class HomePageComponent{
       visible: false,
     }
   ]
+
+
+  mapClicked($event: MouseEvent) {
+    this.markers.push({
+      lat: $event.coords.lat,
+      lng: $event.coords.lng,
+      draggable: false,
+      visible: false
+    });
+  }
 
   buttonsForm : FormGroup;
 
@@ -98,7 +92,6 @@ export class HomePageComponent{
     this.markers[4].visible = true;
   }
  }
-
 }
 
 

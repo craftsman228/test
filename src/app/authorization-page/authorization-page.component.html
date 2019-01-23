@@ -5,14 +5,25 @@
   <form class="col s12" (ngSubmit)="loginUser(username,password)" formGroup="authForm">
    <div class="row">
     <div class="input-field col s12">
-      <input  id="first_name" type="text" class="form-control" formControlName="username">
-      <label class="active" for="first_name">Login</label>
+      <input list="logins" formControlName="username">
+        <datalist id="logins" name="log">
+          <option value="user0"></option>
+          <option value="user1"></option>
+          <option value="user2"></option>
+          <option value="user3"></option>
+        </datalist>
+      <label class="active">Login</label>
     </div>
-  </div>
+   </div>
     <div class="row">
       <div class="input-field col s12">
-        <input id="password" type="password" class="form-control" formControlName="password">
-        <label class="active" for="password">Password</label>
+        <input formControlName="password" list="pswdlist">
+          <datalist id="pswdlist">
+            <option value="4574pp">4574pp</option>
+            <option value="df53g">df53g</option>
+            <option value="j46g">j46g</option>
+          </datalist>
+        <label class="active">Password</label>
       </div>
     </div>
     <button margin-left=100px class="btn waves-effect waves-light" type="submit" name="action">JOIN
