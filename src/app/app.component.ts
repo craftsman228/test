@@ -8,6 +8,6 @@ import {google} from "@agm/core/services/google-maps-types";
 })
 export class AppComponent {
   title = 'test-doIt';
-}
+  }
 
 

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { MouseEvent } from '@agm/core';
 import {google} from "@agm/core/services/google-maps-types";
 import {FormControl, FormGroup} from "@angular/forms";
-import { IMarker } from '../marker';
 
 @Component({
   selector: 'app-home-page',
@@ -61,8 +60,7 @@ export class HomePageComponent{
     }
   ]
 
-
-  mapClicked($event: MouseEvent) {
+mapClicked($event: MouseEvent) {
     this.markers.push({
       lat: $event.coords.lat,
       lng: $event.coords.lng,
@@ -93,6 +91,15 @@ export class HomePageComponent{
   }
  }
 }
+
+interface IMarker {
+  lat: number;
+  lng: number;
+  label?: string;
+  draggable: boolean;
+  visible: boolean;
+}
+
 
 
 
